@@ -1,4 +1,4 @@
-import os, struct, json, zlib, shutil, pathlib
+import os, struct, zlib, shutil, pathlib
 from tkinter import *
 from tkinter import filedialog
 
@@ -47,14 +47,14 @@ before_sdpath = "000000020000000000000001E07FCC3F"
 
 for filename in os.scandir(directory):
 
-    ipkname = filename.name
+    bundlename = filename.name
 
-    print(str(contagem)+" | adding "+ ipkname)
+    print(str(contagem)+" | adding "+ bundlename)
     songdesctpl="songdesc.main_legacy.tpl"
-    songdescpath="cache/legacyconverteddata/"+ipkname+"/"
+    songdescpath="cache/legacyconverteddata/"+bundlename+"/"
     skuenc.write(bytes.fromhex(after_mapname))
     
-    skuenc.write(struct.pack(">I",len(ipkname))+ipkname.encode())
+    skuenc.write(struct.pack(">I",len(bundlename))+bundlename.encode())
 
     skuenc.write(bytes.fromhex(before_mapname))
 
@@ -70,11 +70,11 @@ skuenc.write(bytes.fromhex("000000000000000000000001F878DC2D0000000E6A6432303230
 skuenc.write(struct.pack(">I",int(i)))
 
 for filename in os.scandir(directory):
-    ipkname = filename.name
-    covergenericact=ipkname+"_cover_generic.act"
-    menuartpath="world/maps/"+ipkname+"/menuart/actors/"
+    bundlename = filename.name
+    covergenericact=bundlename+"_cover_generic.act"
+    menuartpath="world/maps/"+bundlename+"/menuart/actors/"
         
-    skuenc.write(struct.pack(">I",len(ipkname))+ipkname.encode())
+    skuenc.write(struct.pack(">I",len(bundlename))+bundlename.encode())
 
     skuenc.write(struct.pack(">I",len(covergenericact))+covergenericact.encode())
 
