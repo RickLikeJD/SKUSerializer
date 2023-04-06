@@ -14,13 +14,13 @@ English:
 ## 💻 How to use SKUSerializer?
 To use, follow these steps:
 
-```
-Run "main.py" or "main.exe" and choose your folder with the bundles, something like
-```
+
+1 | Run "main.py" or "main.exe" and choose your folder with the bundles, something like
+
 ![image](https://user-images.githubusercontent.com/90710434/230468437-32249cd1-742a-4cda-96e2-c413d03a9703.png)
-```
-After that, if everything goes well, your files will be in "output" and a window will show up with the amount of maps added!
-```
+
+2 | After that, if everything goes well, your files will be in "output" and a window will show up with the amount of maps added!
+
 ![image](https://user-images.githubusercontent.com/90710434/230469229-8bb41a26-457c-4435-8685-4a18d6e73453.png)
 
 ## 📝 Credits
@@ -49,13 +49,13 @@ Português:
 ## 💻Como usar o SKUSerializer?
 Para usar, siga estas etapas:
 
-```
-Execute o "main.py" ou "main.exe" e escolha sua pasta com os bundles, algo como
-```
+
+1 | Execute o "main.py" ou "main.exe" e escolha sua pasta com os bundles, algo como
+
 ![image](https://user-images.githubusercontent.com/90710434/230468437-32249cd1-742a-4cda-96e2-c413d03a9703.png)
-```
-Após isso, se tudo der certo, seus arquivos estarão em "output" e terá uma janela com a quantidade de mapas adicionados!
-```
+
+2 | Após isso, se tudo der certo, seus arquivos estarão em "output" e terá uma janela com a quantidade de mapas adicionados!
+
 ![image](https://user-images.githubusercontent.com/90710434/230469229-8bb41a26-457c-4435-8685-4a18d6e73453.png)
 
 ## 📝 Créditos
