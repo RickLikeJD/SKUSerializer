@@ -32,9 +32,13 @@ skubasepath="world/skuscenes/"
 
 # header
 skuenc.write(struct.pack(">I", 1))
-skuenc.write(bytes.fromhex("00033E9E000000000000000000000000"))
+skuenc.write(bytes.fromhex("0004575C000000000000000000000000"))
+
 for filename in os.scandir(directory):
+    if filename.name == "patch":
+        continue
     i += 1
+
 skuenc.write(struct.pack(">I",1+int(i)))
 # end of header
 
@@ -46,7 +50,8 @@ before_sdpath = "000000020000000000000001E07FCC3F"
 # end
 
 for filename in os.scandir(directory):
-
+    if filename.name == "patch":
+        continue
     bundlename = filename.name
 
     print(str(contagem)+" | adding "+ bundlename)
@@ -66,10 +71,12 @@ for filename in os.scandir(directory):
     contagem+=1
     map_count+=1
 
-skuenc.write(bytes.fromhex("000000000000000000000001F878DC2D0000000E6A64323032302D7769692D6E6F61000000044E43534100000013726174696E675F657372625F3136392E69736300000025776F726C642F75692F73637265656E732F626F6F7473657175656E63652F726174696E672F8ACD0EAD00000000"))
+skuenc.write(bytes.fromhex("000000000000000000000001F878DC2D0000000F6A64323031392D783336302D616C6C000000044E43534100000015626F6F745F7761726E696E675F657372622E6973630000001E776F726C642F75692F73637265656E732F626F6F745F7761726E696E672FAE913A3700000000"))
 skuenc.write(struct.pack(">I",int(i)))
 
 for filename in os.scandir(directory):
+    if filename.name == "patch":
+        continue
     bundlename = filename.name
     covergenericact=bundlename+"_cover_generic.act"
     menuartpath="world/maps/"+bundlename+"/menuart/actors/"
@@ -85,10 +92,6 @@ for filename in os.scandir(directory):
 skuenc.write(struct.pack(">I", 0))
 skuenc.close()
 
-pcisc="output/skuscene_maps_pc_all.isc.ckd"
-wiinoaisc="output/skuscene_maps_wii_noa.isc.ckd"
-
-shutil.copy(pcisc,wiinoaisc)
 
 if map_count == 0:
     print("não há mapas")
