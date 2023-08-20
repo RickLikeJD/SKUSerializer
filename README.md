@@ -53,11 +53,11 @@ Para usar, siga estas etapas:
 
 1 | Execute o "main.py" ou "main.exe" e escolha sua pasta com os bundles, algo como
 
-![image](https://user-images.githubusercontent.com/90710434/230468437-32249cd1-742a-4cda-96e2-c413d03a9703.png)
+![image](https://github.com/RickLikeJD/SKUSerializer/assets/90710434/7c6e17b2-d2f7-4229-91d5-2efaf754d794)
 
 2 | Após isso, se tudo der certo, seus arquivos estarão em "output" e terá uma janela com a quantidade de mapas adicionados!
 
-![image](https://user-images.githubusercontent.com/90710434/230469229-8bb41a26-457c-4435-8685-4a18d6e73453.png)
+![image](https://github.com/RickLikeJD/SKUSerializer/assets/90710434/a0482be6-4f5d-4a8e-b024-25f0522ef538)
 
 ## 📝 Créditos
 
