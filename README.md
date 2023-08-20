@@ -15,13 +15,14 @@ English:
 To use, follow these steps:
 
 
-1 | Run "main.py" or "main.exe" and choose your folder with the bundles, something like
+1 | Run "main.py" or "main.exe" and choose your folder with the IPKS, something like
 
-![image](https://user-images.githubusercontent.com/90710434/230468437-32249cd1-742a-4cda-96e2-c413d03a9703.png)
+![image](https://github.com/RickLikeJD/SKUSerializer/assets/90710434/7c6e17b2-d2f7-4229-91d5-2efaf754d794)
+
 
 2 | After that, if everything goes well, your files will be in "output" and a window will show up with the amount of maps added!
 
-![image](https://user-images.githubusercontent.com/90710434/230469229-8bb41a26-457c-4435-8685-4a18d6e73453.png)
+![image](https://github.com/RickLikeJD/SKUSerializer/assets/90710434/a0482be6-4f5d-4a8e-b024-25f0522ef538)
 
 ## 📝 Credits
 
