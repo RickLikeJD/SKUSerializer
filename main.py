@@ -34,7 +34,8 @@ skubasepath="world/skuscenes/"
 skuenc.write(struct.pack(">I", 1))
 skuenc.write(bytes.fromhex("00033E9E000000000000000000000000"))
 for filename in os.scandir(directory):
-    if filename.is_file() and filename.name.lower().endswith('.ipk'):
+    if filename.is_file() and filename.name.lower().endswith('_wii.ipk') and filename.name.lower() != 'bundle_wii.ipk' and filename.name.lower() != 'bundlelogic_wii.ipk':
+
         i += 1
 skuenc.write(struct.pack(">I",1+int(i)))
 # end of header
@@ -47,7 +48,7 @@ before_sdpath = "000000020000000000000001E07FCC3F"
 # end
 
 for filename in os.scandir(directory):
-    if filename.is_file() and filename.name.lower().endswith('_wii.ipk'):
+    if filename.is_file() and filename.name.lower().endswith('_wii.ipk') and filename.name.lower() != 'bundle_wii.ipk' and filename.name.lower() != 'bundlelogic_wii.ipk':
         bundlename = filename.name.replace('_wii.ipk', '')  # Remove the "_wii.ipk" suffix
         print(str(contagem) + " | adding " + bundlename)
         songdesctpl = "songdesc.main_legacy.tpl"
@@ -70,7 +71,7 @@ skuenc.write(bytes.fromhex("000000000000000000000001F878DC2D0000000E6A6432303230
 skuenc.write(struct.pack(">I",int(i)))
 
 for filename in os.scandir(directory):
-    if filename.is_file() and filename.name.lower().endswith('_wii.ipk'):
+    if filename.is_file() and filename.name.lower().endswith('_wii.ipk') and filename.name.lower() != 'bundle_wii.ipk' and filename.name.lower() != 'bundlelogic_wii.ipk':
         bundlename = filename.name.replace('_wii.ipk', '')  # Remove the "_wii.ipk" suffix
         covergenericact = bundlename + "_cover_generic.act"
         menuartpath = "world/maps/" + bundlename + "/menuart/actors/"
@@ -97,5 +98,5 @@ if map_count == 0:
     shutil.rmdir("output")
     
 else:
-    print("todos os "+str(i)+" mapas foram adicionados!")
+    print("todos os mapas foram adicionados!")
     os.system("pause")
